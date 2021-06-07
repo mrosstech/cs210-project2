@@ -20,9 +20,16 @@ class Investment {
         double GetMonthlyDeposit();
         int GetAnnualInterest();
         int GetNumYears();
-        Investment();
-        Investment(double t_investment, double t_MonthlyDeposit, int t_numYears, int t_annualInterest);
-};
 
+        void GetInputs();
+        double GetDouble();
+        int GetInt();
+        void PrintTableWithMonthly(int t_startYear);
+        void PrintTableWithoutMonthly(int t_startYear);
+
+        Investment();
+        Investment(double t_investment, double t_monthlyDeposit, int t_annualInterest, int t_numYears);
+
+};
 
 #endif
