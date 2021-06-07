@@ -171,8 +171,8 @@ void Investment::PrintTableWithMonthly(int t_startYear) {
     cout << "     Balance and Interest With Additional Monthly Payments" << endl;
     cout << "==================================================================" << endl;
     cout << right << setw(5) << "Year";
-    cout << right << setw(30) << " " << "Year End Balance";
-    cout << right << setw(30) << " " << "Year End Earned Interest" << endl;
+    cout << right << setw(30) << "Year End Balance";
+    cout << right << setw(30) << "Year End Earned Interest" << endl;
     cout << "------------------------------------------------------------------" << endl;
     
     if (t_startYear + NUM_ROWS_PER_SCREEN <= this->m_numYears) {
@@ -181,7 +181,7 @@ void Investment::PrintTableWithMonthly(int t_startYear) {
         t_years = this->m_numYears;
     }
 
-    for (i = t_startYear; i < t_years; i++) {
+    for (i = t_startYear; i <= t_years; i++) {
         
         for (j = 1; j <= 12; j++) {
             totalWithMonthly = totalWithMonthly + this->m_monthlyDeposit;
@@ -223,8 +223,8 @@ void Investment::PrintTableWithoutMonthly(int t_startYear) {
     cout << "     Balance and Interest Without Additional Monthly Payments" << endl;
     cout << "==================================================================" << endl;
     cout << right << setw(5) << "Year";
-    cout << right << setw(30) << " " << "Year End Balance";
-    cout << right << setw(30) << " " << "Year End Earned Interest" << endl;
+    cout << right << setw(30) << "Year End Balance";
+    cout << right << setw(30) << "Year End Earned Interest" << endl;
     cout << "------------------------------------------------------------------" << endl;
 
     if (t_startYear + NUM_ROWS_PER_SCREEN <= this->m_numYears) {
@@ -233,7 +233,7 @@ void Investment::PrintTableWithoutMonthly(int t_startYear) {
         t_years = this->m_numYears;
     }
 
-    for (i = t_startYear; i < t_years; i++) {
+    for (i = t_startYear; i <= t_years; i++) {
         
         for (j = 1; j <= 12; j++) {
             interest = (totalWithoutMonthly) * ((this->m_annualInterest/100.0)/12.0);

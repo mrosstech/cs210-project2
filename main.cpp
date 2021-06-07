@@ -1,3 +1,6 @@
+// CS-210
+// Author: Michael Ross
+// Interest calculator
 
 #include <iostream>
 
